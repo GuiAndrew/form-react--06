@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Form.css';
 
+let a;
+
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +12,8 @@ class Form extends Component {
   } 
 
   handleChange = (event) => {
-    this.setState({ key: event.target.value })
+    // this.setState({ key: event.target.value }); 
+    this.setState({ key: event.target.value.replace(/\*/g, '') });    
   }  
 
   render() {
